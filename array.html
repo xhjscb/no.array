@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    var arr1 = [1, 2, 3, 4, 5];
+    arr1.forEach(console.log);
+
+    function logArrayElements(element, index, array) {
+        console.log("a[" + index + "] = " + element);
+    }
+    arr1.forEach(logArrayElements);
+    //forEach遍历执行,打印数组内的元素
+    var arr2 = arr1.map(x => 2*x);
+    arr2.forEach(logArrayElements);
+    //map映射，生成新数组
+    var all = arr1.reduce((a,b)=>a+b,0);
+    console.log("all ="+all);
+    //reduce，emmmmm，类似于拆分？再用箭头函数实现累加
+    function isBigEnough(a,b,c) {
+    return (a>2);}
+    var t = arr1.some(isBigEnough);
+    console.log(t);
+    //some测试，测试数组中的元素
+    var arr3 = arr1.filter(isBigEnough);
+    console.log(arr3);
+    //filter筛选，筛选出满足的元素
+    </script>
+    <link rel="stylesheet" type="text/css" href="array.css">
+    <title>array</title>
+</head>
+
+<body>
+</body>
+
+</html>
